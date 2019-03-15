@@ -13,3 +13,5 @@ and what I learned in Academy Pittsburgh.
 This website will have a Home page, a blog page, a resume page, and 
 different ways to search and sort within those things. Updates to this 
 readme will be incoming.
+
+To start I'm using the 'getting started' guide to build the first part of the site, the blog part.
