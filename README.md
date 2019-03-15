@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the github repository for my personal website.
 
-Things you may want to cover:
+I intend to use this website to show off my web development skills, using 
+React, Ruby on Rails, JavaScript, CSS, and whatever else is needed,
+probably jQuery.
 
-* Ruby version
+On this website I intend on having my Resume, Examples of work that I have
+done, the Roguelike game that I am working on, and a blog covering Sports 
+and what I learned in Academy Pittsburgh.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This website will have a Home page, a blog page, a resume page, and 
+different ways to search and sort within those things. Updates to this 
+readme will be incoming.
