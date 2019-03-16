@@ -1,2 +1,38 @@
-<h1>Hello, World!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<div class="main">
+    <h1 class="Header">Michael Huffman</h1>
+    <h2 class="Header">Aspiring Developer, Tinkerer, Optimizer, and Music Lover</h2>
+    <br>
+    <br>
+    <div class="active" id="normal">
+        <%= render "layouts/work_history" %><br>
+    </div>
+    <div class="inactive" id="deep">
+        <%= render "layouts/work_history_deep" %><br>
+    </div>
+    <div class="inactive" id="lite">
+        <%= render "layouts/work_history_lite" %><br>
+    </div>
+    Recent bliggity blogs<br>
+    <% if @articles.length >= 3 %>
+        <% (@articles.length-1).downto(@articles.length-3) do |i| %>
+            <%= link_to @articles[i].title, article_path(@articles[i]) %>
+            <%= image_tag @articles[i].picture, class:"preview-img" %>
+        <% end %>
+    <% end%>
+</div>
+<div class="aside aside-1">
+    <div class="aside-1-text">
+        <div onclick="changeWork('lite')">
+            Skim
+        </div>
+        <div onclick="changeWork('normal')">
+            Normal
+        </div>
+        <div onclick="changeWork('deep')">
+            Deep Dive
+        </div>
+    </div>
+</div>
+<div class="aside aside-2">
+    <%= render "layouts/bio" %>
+</div>

@@ -1,3 +1,4 @@
+
 <%= form_with model: @article, local: true do |form| %>
 
     <% if @article.errors.any? %>
@@ -18,6 +19,10 @@
         <%= form.label :title %><br>
         <%= form.text_field :title %>
     </p>
+    <p>
+        <%= form.label :picture %><br>
+        <%= form.text_field :picture%>
+    </p>
 
     <p>
         <%= form.label :text %><br>
@@ -29,4 +34,9 @@
     </p>
 
 <% end %>
+<link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+<script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
+<script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
+<script>var editor = new Editor();
+editor.render();</script>
 

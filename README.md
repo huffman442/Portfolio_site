@@ -15,3 +15,6 @@ different ways to search and sort within those things. Updates to this
 readme will be incoming.
 
 To start I'm using the 'getting started' guide to build the first part of the site, the blog part.
+
+I used this article to help me think about building the blog engine to be better
+https://thoughtbot.com/blog/adding-a-blog-to-a-rails-app

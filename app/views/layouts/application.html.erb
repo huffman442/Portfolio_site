@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PortfolioSite</title>
+    <title>Michael Huffman</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <div class="header">
+        <%= render "layouts/header" %>
+      </div>
+      
+      <%= yield %>
+      
+      
+
+      <div class="footer">
+        <%= render "layouts/footer"%>
+      </div>
+    </div>
   </body>
 </html>

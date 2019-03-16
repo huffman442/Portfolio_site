@@ -1,3 +1,94 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1, h2 {
+    text-align: center;
+}
+body {
+    background-color: lightgray;
+}
+.footer {
+    display: float;
+}
+.inactive {
+  display: none;
+}
+.personal_pic {
+    border-radius: 15em;
+    height: 6.5em;
+    position: float;
+}
+
+.container {
+    background-color: white;
+    padding: 1em; 
+    display: flex;   
+}
+
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+  
+  .header {
+    background: tomato;
+  }
+  
+  .footer {
+    background: white;
+  }
+  
+  .main {
+    text-align: left;
+    background: white;
+    margin: 1em;
+  }
+  
+  .aside-1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .aside-1-text{
+    position: fixed;
+    background: white;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  
+  .aside-2 {
+    background: white;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+  
+  @media all and (min-width: 600px) {
+    .aside { flex: 1 0 0; }
+  }
+  
+  @media all and (min-width: 800px) {
+    .main    { flex: 3 0px; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+    .footer  { order: 4; }
+  }
+  
+  body {
+    padding: 2em; 
+  }
+
+  .preview-img {
+    height: 6em;
+  }

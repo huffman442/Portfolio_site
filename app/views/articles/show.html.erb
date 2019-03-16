@@ -1,12 +1,14 @@
-<p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-</p>
+<div class="center jumbotron">
+    <p>
+        <strong>Title:</strong>
+        <%= @article.title %>
+    </p>
 
-<p>
-    <strong>Text:</strong>
-    <%= @article.text %>
-</p>
+    <p>
+        <strong>Text:</strong>
+        <%= Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@article.text).html_safe %>
+    </p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> | 
-<%= link_to 'Back', articles_path %> 
+    <%= link_to 'Edit', edit_article_path(@article) %> | 
+    <%= link_to 'Back', articles_path %> 
+</div>

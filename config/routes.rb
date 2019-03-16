@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   resources :articles
 
   root 'welcome#index'
+
+  get '/resume',    to:'welcome#resume'
+
+
 end

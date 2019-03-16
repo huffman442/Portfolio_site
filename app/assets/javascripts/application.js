@@ -14,3 +14,22 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function changeWork(lvl) {
+    const deepContainer = document.getElementById("deep");
+    const liteContainer = document.getElementById("lite");
+    const normalContainer = document.getElementById("normal");
+    if(lvl === "deep") {
+          deepContainer.className = "active";
+          liteContainer.className = "inactive";
+          normalContainer.className = "inactive";
+    } else if(lvl === "lite") {
+        liteContainer.className = "active";
+        deepContainer.className = "inactive";
+        normalContainer.className = "inactive";
+    } else if(lvl === "normal") {
+        normalContainer.className = "active"
+        liteContainer.className = "inactive"
+        deepContainer.className = "inactive"
+    }
+}
