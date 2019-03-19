@@ -19,17 +19,30 @@ function changeWork(lvl) {
     const deepContainer = document.getElementById("deep");
     const liteContainer = document.getElementById("lite");
     const normalContainer = document.getElementById("normal");
+    const depth1Container = document.getElementById("depth-1");
+    const depth2Container = document.getElementById("depth-2");
+    const depth3Container = document.getElementById("depth-3");
     if(lvl === "deep") {
           deepContainer.className = "active";
           liteContainer.className = "inactive";
           normalContainer.className = "inactive";
+          depth3Container.innerHTML ="•In-Depth"
+          depth1Container.innerHTML ="Snapshot"
+          depth2Container.innerHTML ="Normal"
+
     } else if(lvl === "lite") {
         liteContainer.className = "active";
         deepContainer.className = "inactive";
         normalContainer.className = "inactive";
+        depth1Container.innerHTML ="•Snapshot"
+        depth2Container.innerHTML ="Normal"
+        depth3Container.innerHTML ="In-Depth"
     } else if(lvl === "normal") {
         normalContainer.className = "active"
         liteContainer.className = "inactive"
         deepContainer.className = "inactive"
+        depth2Container.innerHTML ="•Normal"
+        depth1Container.innerHTML ="Snapshot"
+        depth3Container.innerHTML ="In-Depth"
     }
 }
