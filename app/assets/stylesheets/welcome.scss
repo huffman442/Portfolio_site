@@ -24,8 +24,8 @@ body {
 
 .container {
     background-color: white;
-    padding: 1em; 
-    display: flex;   
+    padding: 3em;
+    margin-bottom: 1em;   
 }
 
 .wrapper {
@@ -50,7 +50,6 @@ body {
   
   .main {
     text-align: left;
-    background: white;
     margin: 1em;
   }
   
@@ -70,7 +69,8 @@ body {
   .aside-2 {
     background: white;
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 2em;
+    height: 50vh;
   }
   
   @media all and (min-width: 600px) {
@@ -90,5 +90,43 @@ body {
   }
 
   .preview-img {
-    height: 6em;
+    height: 15em;
+    margin-right: 3em;
   }
+  .preview-img:hover{
+    opacity:.6;
+    z-index: -1000;
+  }
+  .article-link {
+    position:absolute;
+    margin-top: 15em;
+    margin-left:auto;
+    margin-right:auto;
+    color:darkslategrey;
+    overflow: hidden;
+    text-align:center;
+  }
+  .article-link:hover {
+    color:gray;
+  }
+
+  .depth-links {
+    cursor: pointer;
+  }
+.markdown-editor {
+  -webkit-appearance: textarea;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  resize: auto;
+  cursor: text;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  border-width: 1px;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  padding: 2px;
+  margin-left: 20vw;
+  text-align: left;
+  width: 60vw;
+}
