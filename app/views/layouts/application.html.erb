@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+
     <title>Michael Huffman</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="http://lab.lepture.com/editor/editor.css" />
+    <script type="text/javascript" src="http://lab.lepture.com/editor/editor.js"></script>
+    <script type="text/javascript" src="http://lab.lepture.com/editor/marked.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,9 +19,7 @@
         <%= render "layouts/header" %>
       </div>
       
-      <%= yield %>
-      
-      
+      <%= yield %>     
 
       <div class="footer">
         <%= render "layouts/footer"%>
