@@ -1,36 +1,41 @@
 <div class="main">
-    <h1 class="Header">Michael Huffman</h1>
-    <h2 class="Header">Aspiring Developer, Tinkerer, Optimizer, and Music Lover</h2>
-    <br>
-    <br>
-    <div class="active" id="normal">
-        <%= render "layouts/work_history" %><br>
+    <div class="container">
+        <h1 class="Header">Michael Huffman</h1><br>
+        <h2 class="Header">Aspiring Developer, Tinkerer, Optimizer, and Music Lover</h2>
     </div>
-    <div class="inactive" id="deep">
-        <%= render "layouts/work_history_deep" %><br>
+    <div class="container">
+        <div class="active" id="normal">
+            <%= render "layouts/work_history" %><br>
+        </div>
+        <div class="inactive" id="deep">
+            <%= render "layouts/work_history_deep" %><br>
+        </div>
+        <div class="inactive" id="lite">
+            <%= render "layouts/work_history_lite" %><br>
+        </div>
     </div>
-    <div class="inactive" id="lite">
-        <%= render "layouts/work_history_lite" %><br>
-    </div>
-    Recent bliggity blogs<br>
-    <% if @articles.length >= 3 %>
-        <% (@articles.length-1).downto(@articles.length-3) do |i| %>
-            <%= link_to @articles[i].title, article_path(@articles[i]) %>
-            <%= image_tag @articles[i].picture, class:"preview-img" %>
+    <div class="container">
+        <% @articles_displayed.each do |article| %>
+            <%= link_to article.title, article_path(article), class:"article-link" %>
+            <%= link_to article_path(article) do %>
+                <%= image_tag article.picture, class:"preview-img" %>
+            <% end %>
         <% end %>
-    <% end%>
+    </div>
 </div>
 <div class="aside aside-1">
     <div class="aside-1-text">
-        <div onclick="changeWork('lite')">
-            Skim
+    
+        <div onclick="changeWork('lite')" class="depth-links" id="depth-1">
+            Snaphot
         </div>
-        <div onclick="changeWork('normal')">
-            Normal
+        <div onclick="changeWork('normal')" class="depth-links" id="depth-2">
+            •Normal
         </div>
-        <div onclick="changeWork('deep')">
-            Deep Dive
+        <div onclick="changeWork('deep')" class="depth-links" id="depth-3">
+            In-Depth
         </div>
+        
     </div>
 </div>
 <div class="aside aside-2">
