@@ -1,0 +1,25 @@
+<div class="center jumbotron">
+    <h1>Lessons, Ramblings, and Rants</h1>
+    <h4>Welcome to my blog, here I talk about lessons I've learned, attempt writing about my favorite 
+    sports team(Pittsburgh Pirates), and give tips about making it through a coding bootcamp</h4>
+
+    <div class="dropdown">
+          <button class="dropbtn">Filter By Tag</button>
+            <div class="dropdown-content">
+                <%= link_to 'All', articles_path %>
+                <% @tags.each do |tag|  %>
+                    <%= link_to tag.body, tag_path(tag.body) %>
+                <% end %>
+            </div>
+    </div>
+    <div class="container-article-index">        
+        <% @articles.reverse.each do |article| %>
+        <div class="container-preview">
+            <%= link_to article.title, admin_article_path(article), class:"article-link" %>
+            <%= link_to admin_article_path(article) do %>
+                <%= image_tag article.picture, class:"preview-img-article-index" %>
+            <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>

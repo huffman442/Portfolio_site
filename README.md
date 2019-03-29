@@ -18,3 +18,7 @@ To start I'm using the 'getting started' guide to build the first part of the si
 
 I used this article to help me think about building the blog engine to be better
 https://thoughtbot.com/blog/adding-a-blog-to-a-rails-app
+
+Building authentication from scratch:
+http://railscasts.com/episodes/250-authentication-from-scratch-revised?autoplay=true
+

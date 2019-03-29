@@ -1,0 +1,13 @@
+<div class="center jumbotron">
+    <p>
+        <%= @article.title %>
+    </p>
+
+    <p>
+        <div class="show-body">
+            <%= Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@article.text).html_safe %>
+        </div>
+    </p>
+    
+    <%= link_to 'Back', articles_path %> 
+</div>
