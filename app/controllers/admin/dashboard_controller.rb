@@ -4,4 +4,7 @@ class Admin::DashboardController < ApplicationController
   
   def index
   end
+
+  def new
+  end
 end

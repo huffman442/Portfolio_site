@@ -10,4 +10,7 @@ class WelcomeController < ApplicationController
 
   def resume
   end
+
+  def workexamples
+  end
 end
