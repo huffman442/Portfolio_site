@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
     resources :articles
+    get 'admin/new'
+
   end
 
   get 'sessions/new'
@@ -19,7 +21,6 @@ Rails.application.routes.draw do
   resources :articles do
     resources :tags
   end
-
   get 'tags/:tag', to: 'articles#index', as: :tag
 
   root 'welcome#index'
