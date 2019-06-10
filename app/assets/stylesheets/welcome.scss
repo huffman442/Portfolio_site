@@ -4,11 +4,24 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.workblocks {
+  margin-top: 2.5em;
+  img{ 
+    width: 10vw;
+    float:left;
+    margin: 1.25em;
+  }
+  li{
+    font-weight: normal;
+  }
+}
 h1, h2 {
     text-align: center;
 }
 body {
     background-color: lightgray;
+    padding-left: .5em;
 }
 .footer {
     display: float;
@@ -54,14 +67,17 @@ body {
   }
   
   .aside-1 {
+    position: fixed;
     margin-top: 1em;
     margin-bottom: 1em;
+    margin-left: 0em;
+    width:auto;
   }
   .aside-1-text{
-    position: fixed;
+    //position: fixed;
     background: white;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
   }
